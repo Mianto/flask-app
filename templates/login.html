@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask-Intro Login</title>
+    <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css" media = 'screen'>
+</head>
+<body>
+    <h1>Please Login</h1>
+    <div class = 'container'>
+        <form action = '' method="post">
+            <input type='text' placeholder="Username" name = 'username' value = "{{
+            request.form.username }}">
+
+            <input type='password' placeholder="Password" name = 'password' value = "{{
+            request.form.password }}">
+
+            <input class='btn-btn-default' type="submit" value="Login">
+        </form>
+        {% if error %}
+            <p class='error'>
+                <strong>Error</strong> {{ error }}
+            </p>
+        {% endif %}
+        <br/>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor%}
+
+    </div>
+
+</body>
+</html>

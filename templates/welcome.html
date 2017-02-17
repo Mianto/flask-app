@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Blog</title>
+</head>
+<body>
+    <h1>Welcome To Flask</h1>
+    {% for message in get_flashed_messages() %}
+        {{ message }}
+    {% endfor%}
+</body>
+</html>
