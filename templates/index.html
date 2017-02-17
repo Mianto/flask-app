@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Flask Blog</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to Flask</h1>
-        <br/>
-        <p>Click<a href="/logout"> to log out</a></p>
-        <p>
-        {% for message in get_flashed_messages() %}
-            {{ message }}
-        {% endfor%}
-        </p>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Welcome to Flask</h1>
+<br/>
+<p>Click<a href="/logout"> to log out</a></p>
+
+{% endblock %}
